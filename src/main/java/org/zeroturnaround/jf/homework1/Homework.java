@@ -2,6 +2,8 @@ package org.zeroturnaround.jf.homework1;
 
 import org.apache.commons.lang3.StringUtils;
 
+import static org.apache.commons.lang3.StringUtils.getCommonPrefix;
+
 public class Homework {
 
     public String reverse(String str) {
@@ -21,8 +23,6 @@ public class Homework {
      * empty or null, the method should return an empty string.
      */
     public String getCommonSuffix(String first, String second) {
-        String result = "fix me!";
-        // your implementation here!
-        return result;
+        return reverse(getCommonPrefix(reverse(first), reverse(second)));
     }
 }
